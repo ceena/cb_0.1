@@ -41,6 +41,6 @@ public class clUIMain {
 		controller = clController.getInstance();
 		feedFromUI = new clFeed(HALLO_WORLD_SOURCE);
 		excNo = 1000;
-		
+		//new line - testing git
 	}
 }
