@@ -1,7 +1,5 @@
 package rulePack;
 
-import java.util.Hashtable;
-
 import controller.clFeed;
 import controller.clResultObject;
 
@@ -15,5 +13,5 @@ public abstract class IFRule {
 		this.ID = id;
 		this.desc = desc;
 	}
-	public abstract clResultObject checkRule(Hashtable<String, String> ruleSetCond, clFeed feed);
+	public abstract clResultObject checkRule(clRuleConditions ruleSetCond, clFeed feed);
 }

@@ -1,6 +1,6 @@
 package model;
 
-import java.util.Hashtable;
+import rulePack.clRuleConditions;
 
 public class clModel {
 
@@ -22,7 +22,7 @@ public static clModel instance = null;
 		return clExcRuleMap.fetchRuleSetName(excNo);
 	}
 	
-	public Hashtable<String, String>fetchRuleSetConditions(int excNo){
+	public clRuleConditions fetchRuleSetConditions(int excNo){
 		
 		return clExcRuleMap.fetchRuleSetConditions(excNo);
 	}

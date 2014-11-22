@@ -1,6 +1,6 @@
 package rulePack;
 
-import java.util.Hashtable;
+import java.util.HashMap;
 
 import controller.clFeed;
 import controller.clResultObject;
@@ -14,7 +14,7 @@ public class clRuleHasClassName extends IFRule {
 		this.setAttributes(id, desc);
 	}
 	@Override
-	public clResultObject checkRule(Hashtable<String, String> ruleSetCond, clFeed feed)
+	public clResultObject checkRule(clRuleConditions ruleSetCond, clFeed feed)
 	{
 /*		ScriptEvaluator se = new ScriptEvaluator();
 
@@ -28,7 +28,8 @@ public class clRuleHasClassName extends IFRule {
 		Class<? extends ScriptEvaluator> clSe =  se.getClass();
 		return null;*/
 		
-		String clName = ruleSetCond.get("clRuleHasClassName");
+		HashMap<String, String> ruleMap = ruleSetCond.getRuleMap("clRuleHasClassName");
+		String clName = ruleMap.get("att_class_name");
 		if(feed.isCooked){
 			Class<?> cl = feed.getCompiledFeed().loadClass(clName);
 			if(cl != null)

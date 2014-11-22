@@ -28,7 +28,7 @@ public abstract class IFRuleSet {
 		alRules.add(ruleAtt);
 	}
 	
-	public clResultObjectSet evaluate(Hashtable<String,String> ruleSetCond, clFeed feed){
+	public clResultObjectSet evaluate(clRuleConditions ruleSetCond, clFeed feed){
 		
 		clResultObjectSet resultSet = new clResultObjectSet();
 		Iterator<clRuleAtt> iterator = alRules.iterator();

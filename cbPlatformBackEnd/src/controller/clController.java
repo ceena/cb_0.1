@@ -1,8 +1,12 @@
 package controller;
 
-import java.util.Hashtable;
-
 import model.clModel;
+import rulePack.clRuleConditions;
+
+/************************************************************************
+ * Controller - Singleton
+ * TO-DO: Check the scenario in multi-threaded environment
+ ***********************************************************************/
 
 public final class clController {
 	
@@ -27,7 +31,7 @@ public static clController instance = null;
 		//Get corresponding ruleSet from DB
 		String ruleSetName = clModel.getInstance().fetchRuleSetName(excNo);
 		
-		Hashtable<String, String> ruleSetCond = clModel.getInstance().fetchRuleSetConditions(excNo);
+		clRuleConditions ruleSetCond = clModel.getInstance().fetchRuleSetConditions(excNo);
 		
 		resultObjectSet = codeValidator.evaluate(ruleSetName, ruleSetCond, feed);
 		

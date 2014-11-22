@@ -8,7 +8,7 @@ import controller.clResultObjectSet;
 public class clUIMain {
 
 	static clController controller = null;
-	static clFeed feedFromUI;
+	static clFeed feedFromUI = null;
 	static int excNo = 0;
 	
 	public static void main(String[] args) {

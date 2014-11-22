@@ -1,0 +1,8 @@
+package rulePack;
+
+import java.util.HashMap;
+import java.util.Hashtable;
+
+public class clRuleConditions {
+	Hashtable<String, HashMap<String, String>> ruleCondTable;
+}

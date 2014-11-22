@@ -1,7 +1,5 @@
 package rulePack;
 
-import java.util.Hashtable;
-
 import controller.clFeed;
 import controller.clResultObject;
 
@@ -14,7 +12,7 @@ public class clRuleHasMethod extends IFRule{
 		this.setAttributes(id, desc);
 	}
 	@Override
-	public clResultObject checkRule(Hashtable<String, String> ruleSetCond, clFeed feed) {
+	public clResultObject checkRule(clRuleConditions ruleSetCond, clFeed feed) {
 		// TODO Auto-generated method stub
 		
 		

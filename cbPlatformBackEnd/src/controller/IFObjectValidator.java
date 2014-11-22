@@ -1,10 +1,10 @@
 package controller;
 
 import java.util.ArrayList;
-import java.util.Hashtable;
 
 import rulePack.IFRule;
 import rulePack.IFRuleSet;
+import rulePack.clRuleConditions;
 
 public abstract class IFObjectValidator {
 
@@ -12,7 +12,7 @@ public abstract class IFObjectValidator {
 
 	public abstract void loader();
 
-	public clResultObjectSet evaluate(String ruleSetName, Hashtable<String,String> ruleSetCond, clFeed feed) {
+	public clResultObjectSet evaluate(String ruleSetName, clRuleConditions ruleSetCond, clFeed feed) {
 
 		IFRuleSet ruleSet = loadRuleSet(ruleSetName);
 
