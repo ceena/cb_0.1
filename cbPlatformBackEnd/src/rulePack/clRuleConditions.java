@@ -17,10 +17,16 @@ public class clRuleConditions {
 	}
 	
 	public void addCondition(String ruleName, String attribute, String value){
-		HashMap<String, String> ruleAtt = new HashMap<String, String>();
+		HashMap<String, String> ruleAtt;
 		
 		ruleAtt = ruleCondTable.get(ruleName);
-		ruleAtt.put(attribute, value);
+		
+		if(ruleAtt == null)
+			ruleAtt = new HashMap<String, String>();
+		
+			ruleAtt.put(attribute, value);
+			
+			ruleCondTable.put(ruleName,ruleAtt);
 	}
 	
 	public HashMap<String, String> getRuleMap(String ruleName){
