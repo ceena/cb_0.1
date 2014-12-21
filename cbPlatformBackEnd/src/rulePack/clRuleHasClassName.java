@@ -1,11 +1,13 @@
 package rulePack;
 
-import java.util.HashMap;
+import org.codehaus.commons.compiler.CompileException;
+import org.codehaus.janino.ScriptEvaluator;
 
 import controller.clFeed;
 import controller.clResultObject;
 
-public class clRuleHasClassName extends IFRule {
+
+public class clRuleHasClassName  extends IFRule {
 
 	public clRuleHasClassName(){
 		int id = 1001;
@@ -14,9 +16,10 @@ public class clRuleHasClassName extends IFRule {
 		this.setAttributes(id, desc);
 	}
 	@Override
-	public clResultObject checkRule(clRuleConditions ruleSetCond, clFeed feed)
+	public clResultObject checkRule(clRuleConditions excCond, clFeed feed)
 	{
-/*		ScriptEvaluator se = new ScriptEvaluator();
+		clClassCondition excClsCond;
+		ScriptEvaluator se = new ScriptEvaluator();
 
 		try {
 			se.cook(feed.getValue());
@@ -25,11 +28,18 @@ public class clRuleHasClassName extends IFRule {
 			e.printStackTrace();
 		}
 		
-		Class<? extends ScriptEvaluator> clSe =  se.getClass();
+		/*Class<? extends ScriptEvaluator> clSe =  se.getClass();
 		return null;*/
 		
-		HashMap<String, String> ruleMap = ruleSetCond.getRuleMap("clRuleHasClassName");
+		/*Object ruleMap = (IFRule) ruleSetCond.getRuleMap("clRuleHasClassName");
 		String clName = ruleMap.get("att_class_name");
+		*/
+		
+		
+		//Check the cooked feed against the conditions of the excerise
+		excClsCond = (clClassCondition) excCond.getRuleMap("clRuleHasClassName");
+		
+		String clName = excClsCond.getClassName();
 		if(feed.isCooked){
 			Class<?> cl = feed.getCompiledFeed().loadClass(clName);
 			if(cl != null)

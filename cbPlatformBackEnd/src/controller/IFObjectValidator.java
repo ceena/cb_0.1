@@ -12,11 +12,11 @@ public abstract class IFObjectValidator {
 
 	public abstract void loader();
 
-	public clResultObjectSet evaluate(String ruleSetName, clRuleConditions ruleSetCond, clFeed feed) {
+	public clResultObjectSet evaluate(String ruleSetName, clRuleConditions excCondition, clFeed feed) {
 
 		IFRuleSet ruleSet = loadRuleSet(ruleSetName);
 
-		clResultObjectSet resultSet = ruleSet.evaluate(ruleSetCond, feed);
+		clResultObjectSet resultSet = ruleSet.evaluate(excCondition, feed);
 		
 		return resultSet;
 	}

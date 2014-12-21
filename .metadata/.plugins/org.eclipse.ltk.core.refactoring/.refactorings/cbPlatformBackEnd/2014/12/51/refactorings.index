@@ -1,0 +1,7 @@
+1419079870403	Encapsulate field 'checkClassName'
+1419079884893	Encapsulate field 'checkConstructor'
+1419080177543	Rename local variable 'ruleSetCond'
+1419080218863	Rename local variable 'ruleSetCond'
+1419080511244	Rename local variable 'excConditionTable'
+1419080602614	Rename field 'checkClassName'
+1419080633194	Encapsulate field 'className'

@@ -1,6 +1,5 @@
 package rulePack;
 
-import java.util.HashMap;
 import java.util.Hashtable;
 
 /************************************************************************
@@ -9,27 +8,20 @@ import java.util.Hashtable;
  ***********************************************************************/
 
 public class clRuleConditions {
-		Hashtable<String, HashMap<String, String>> ruleCondTable;
-	
+		Hashtable<String, clConditions> ruleCondTable;	
 	
 	public clRuleConditions(){
-		ruleCondTable = new Hashtable<String, HashMap<String, String>>();
+		ruleCondTable = new Hashtable<String, clConditions>();
 	}
 	
-	public void addCondition(String ruleName, String attribute, String value){
-		HashMap<String, String> ruleAtt;
-		
-		ruleAtt = ruleCondTable.get(ruleName);
-		
-		if(ruleAtt == null)
-			ruleAtt = new HashMap<String, String>();
-		
-			ruleAtt.put(attribute, value);
+	public void addCondition(String ruleName, clConditions ruleConds){
 			
-			ruleCondTable.put(ruleName,ruleAtt);
+			//Requires sequence number(?)
+			ruleCondTable.put(ruleName,  ruleConds);
 	}
 	
-	public HashMap<String, String> getRuleMap(String ruleName){
+	public clConditions getRuleMap(String ruleName){
 		return ruleCondTable.get(ruleName);
 	}
+	
 }

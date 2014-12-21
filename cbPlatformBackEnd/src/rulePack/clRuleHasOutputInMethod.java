@@ -3,7 +3,7 @@ package rulePack;
 import controller.clFeed;
 import controller.clResultObject;
 
-public class clRuleHasOutputInMethod extends IFRule {
+public class clRuleHasOutputInMethod {/* extends IFRule {
 
 	public clRuleHasOutputInMethod (){
 		int id = 1003;
@@ -16,6 +16,6 @@ public class clRuleHasOutputInMethod extends IFRule {
 	public clResultObject checkRule(clRuleConditions ruleSetCond, clFeed feed) {
 		// TODO Auto-generated method stub
 		return null;
-	}
+	}*/
 
 }

@@ -28,13 +28,13 @@ public abstract class IFRuleSet {
 		alRules.add(ruleAtt);
 	}
 	
-	public clResultObjectSet evaluate(clRuleConditions ruleSetCond, clFeed feed){
+	public clResultObjectSet evaluate(clRuleConditions excCondition, clFeed feed){
 		
 		clResultObjectSet resultSet = new clResultObjectSet();
 		Iterator<clRuleAtt> iterator = alRules.iterator();
 		while(iterator.hasNext()){
 			
-			clResultObject result = iterator.next().getClRule().checkRule(ruleSetCond, feed);
+			clResultObject result = iterator.next().getClRule().checkRule(excCondition, feed);
 			resultSet.addResultObject(result);
 		}
 	

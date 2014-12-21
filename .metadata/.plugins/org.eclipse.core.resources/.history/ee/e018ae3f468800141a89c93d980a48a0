@@ -1,0 +1,20 @@
+package rulePack;
+
+import controller.clFeed;
+import controller.clResultObject;
+
+public class clClassCondition extends IFConditions{
+
+	public String checkClassName; //Indicator to check if 
+	public boolean checkConstructor;
+	
+	public clClassCondition(){
+		
+	}
+	
+	@Override
+	public clResultObject checkRule(clRuleConditions ruleSetCond, clFeed feed) {
+		return null;
+	}
+
+}

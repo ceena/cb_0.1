@@ -4,7 +4,7 @@ import model.clModel;
 import rulePack.clRuleConditions;
 
 /************************************************************************
- * Controller - Singleton
+ * Main Controller Class - Singleton
  * TO-DO: Check the scenario in multi-threaded environment
  ***********************************************************************/
 
@@ -32,6 +32,7 @@ public static clController instance = null;
 		String ruleSetName = clModel.getInstance().fetchRuleSetName(excNo);
 		
 		clRuleConditions ruleSetCond = clModel.getInstance().fetchRuleSetConditions(excNo);
+		
 		
 		resultObjectSet = codeValidator.evaluate(ruleSetName, ruleSetCond, feed);
 		

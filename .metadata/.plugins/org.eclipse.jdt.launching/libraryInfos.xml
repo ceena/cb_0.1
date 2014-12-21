@@ -1,6 +1,38 @@
 <?xml version="1.0" encoding="UTF-8" standalone="no"?>
 <libraryInfos>
-<libraryInfo home="C:\Program Files (x86)\Java\jre7" version="1.7.0_67">
+<libraryInfo home="C:\Lotus\Notes\jvm" version="1.6.0">
+<bootpath>
+<entry path="C:\Lotus\Notes\jvm\lib\vm.jar"/>
+<entry path="C:\Lotus\Notes\jvm\lib\ibmallorb.jar"/>
+<entry path="C:\Lotus\Notes\jvm\lib\rt.jar"/>
+<entry path="C:\Lotus\Notes\jvm\lib\ibmpkcs.jar"/>
+<entry path="C:\Lotus\Notes\jvm\lib\ibmjcefw.jar"/>
+</bootpath>
+<extensionDirs>
+<entry path="C:\Lotus\Notes\jvm\lib\ext"/>
+</extensionDirs>
+<endorsedDirs>
+<entry path="C:\Lotus\Notes\jvm\lib\endorsed"/>
+</endorsedDirs>
+</libraryInfo>
+<libraryInfo home="C:\Program Files (x86)\Adobe\Designer 8.2" version="1.5.0_11">
+<bootpath>
+<entry path="C:\Program Files (x86)\Adobe\Designer 8.2\jre\lib\rt.jar"/>
+<entry path="C:\Program Files (x86)\Adobe\Designer 8.2\jre\lib\i18n.jar"/>
+<entry path="C:\Program Files (x86)\Adobe\Designer 8.2\jre\lib\sunrsasign.jar"/>
+<entry path="C:\Program Files (x86)\Adobe\Designer 8.2\jre\lib\jsse.jar"/>
+<entry path="C:\Program Files (x86)\Adobe\Designer 8.2\jre\lib\jce.jar"/>
+<entry path="C:\Program Files (x86)\Adobe\Designer 8.2\jre\lib\charsets.jar"/>
+<entry path="C:\Program Files (x86)\Adobe\Designer 8.2\jre\classes"/>
+</bootpath>
+<extensionDirs>
+<entry path="C:\Program Files (x86)\Adobe\Designer 8.2\jre\lib\ext"/>
+</extensionDirs>
+<endorsedDirs>
+<entry path="C:\Program Files (x86)\Adobe\Designer 8.2\jre\lib\endorsed"/>
+</endorsedDirs>
+</libraryInfo>
+<libraryInfo home="C:\Program Files (x86)\Java\jre7" version="1.7.0_71">
 <bootpath>
 <entry path="C:\Program Files (x86)\Java\jre7\lib\resources.jar"/>
 <entry path="C:\Program Files (x86)\Java\jre7\lib\rt.jar"/>
@@ -17,6 +49,25 @@
 </extensionDirs>
 <endorsedDirs>
 <entry path="C:\Program Files (x86)\Java\jre7\lib\endorsed"/>
+</endorsedDirs>
+</libraryInfo>
+<libraryInfo home="C:\Program Files (x86)\yWorks\yEd" version="1.8.0_11">
+<bootpath>
+<entry path="C:\Program Files (x86)\yWorks\yEd\jre\lib\resources.jar"/>
+<entry path="C:\Program Files (x86)\yWorks\yEd\jre\lib\rt.jar"/>
+<entry path="C:\Program Files (x86)\yWorks\yEd\jre\lib\sunrsasign.jar"/>
+<entry path="C:\Program Files (x86)\yWorks\yEd\jre\lib\jsse.jar"/>
+<entry path="C:\Program Files (x86)\yWorks\yEd\jre\lib\jce.jar"/>
+<entry path="C:\Program Files (x86)\yWorks\yEd\jre\lib\charsets.jar"/>
+<entry path="C:\Program Files (x86)\yWorks\yEd\jre\lib\jfr.jar"/>
+<entry path="C:\Program Files (x86)\yWorks\yEd\jre\classes"/>
+</bootpath>
+<extensionDirs>
+<entry path="C:\Program Files (x86)\yWorks\yEd\jre\lib\ext"/>
+<entry path="C:\Windows\Sun\Java\lib\ext"/>
+</extensionDirs>
+<endorsedDirs>
+<entry path="C:\Program Files (x86)\yWorks\yEd\jre\lib\endorsed"/>
 </endorsedDirs>
 </libraryInfo>
 </libraryInfos>

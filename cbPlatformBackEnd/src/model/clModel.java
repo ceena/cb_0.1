@@ -2,6 +2,12 @@ package model;
 
 import rulePack.clRuleConditions;
 
+
+/************************************************************************
+ * Main Model Class - Singleton
+ * TO-DO: Check the scenario in multi-threaded environment
+ ***********************************************************************/
+
 public class clModel {
 
 public static clModel instance = null;

@@ -1,0 +1,8 @@
+package rulePack;
+
+public class clConditions {
+
+	public clConditions(String objID){
+		objectID = objID;
+	}
+}

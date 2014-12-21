@@ -12,7 +12,6 @@ public class clUIMain {
 	static int excNo = 0;
 	
 	public static void main(String[] args) {
-		
 		initialize();
 //		clFeed feed =clFeeder.getInstance().getFeed();
 

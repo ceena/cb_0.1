@@ -1,0 +1,5 @@
+package rulePack;
+
+public interface IFConditions {
+	String objectID = null;
+}

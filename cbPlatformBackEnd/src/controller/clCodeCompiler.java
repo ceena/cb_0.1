@@ -2,7 +2,6 @@ package controller;
 
 import java.io.IOException;
 import java.io.StringReader;
-import java.lang.reflect.Field;
 
 import org.codehaus.commons.compiler.CompileException;
 import org.codehaus.janino.SimpleCompiler;
@@ -12,7 +11,7 @@ public class clCodeCompiler {
 	protected ClassLoader classLoader = null;
 	
 	public ClassLoader compile(String code) {
-		String out = "";
+//		String out = "";
 
 		SimpleCompiler compiler = new SimpleCompiler();
 		try {
@@ -22,8 +21,8 @@ public class clCodeCompiler {
 			e.printStackTrace();
 		} // compile the string
 			// get the loaded class
-		boolean priceFieldFlag = false;
-		Class<?> cl;
+//		boolean priceFieldFlag = false;
+//		Class<?> cl;
 		try {
 			classLoader = compiler.getClassLoader();
 		} catch (Exception e) {
