@@ -1,0 +1,5 @@
+package rulePack;
+
+public class clMethodCondition extends clConditions{
+
+}

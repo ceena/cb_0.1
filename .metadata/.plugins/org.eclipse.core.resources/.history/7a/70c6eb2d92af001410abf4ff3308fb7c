@@ -1,0 +1,10 @@
+//  "package generated;"
+				public class Guitar
+			{
+					static int price;
+					private static int run2() 
+					{
+						//return \"run successfully...\";\n" + "    "
+						return price;
+					}
+			}

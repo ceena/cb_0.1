@@ -1,3 +1,4 @@
 1419153177304	Rename type 'ClConditions'
 1419153394339	Delete element
 1419153436290	Encapsulate field 'objectID'
+1419654229832	Encapsulate field 'objType'

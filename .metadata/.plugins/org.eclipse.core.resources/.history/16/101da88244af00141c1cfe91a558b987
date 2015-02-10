@@ -1,0 +1,147 @@
+package rulePack;
+
+import java.io.IOException;
+import java.io.StringReader;
+
+import org.codehaus.commons.compiler.CompileException;
+import org.codehaus.janino.SimpleCompiler;
+/**************************************************************************/
+/* This class extracts conditions from the source code (Exercise solution 
+ * for selected rules.
+ * 		1.  Cook the feed from UI
+ * 		2.  Based on the selected rules, get extract conditions from the 
+ * 			instance
+ * 		3.  Return the extracted conditions to serialization
+ * 							                                              */
+/**************************************************************************/
+public class clGenerateRuleConditionsReBuilt {
+	
+	private Class classObj; 
+	private static String classFeed;
+	private static String[] ruleName;
+	private static boolean cookFeedFlg = true;
+//	private static clFeed feedObj = null;
+//	static String[] preSelConds;
+	
+	
+	public static void main(String[] args) {
+		ruleName = new String[1000];
+		ruleName[0] = "clRuleHasClassName";
+		ruleName[1] = "clRuleHasMethodName";
+		clGenerateRuleConditionsReBuilt ruleCond = new clGenerateRuleConditionsReBuilt(ruleName); //Replace ruleName with args[]
+		
+//		feedObj = new clFeed(classFeed);
+//		ruleCond.extractConditions(ruleName, feedObj);
+		if (cookFeedFlg == true){
+			for(int i = 0; i < ruleName.length; i++){
+				ruleCond.extractConditions(ruleName[i]);//, feedObj);
+			}
+		}
+	}
+	
+	public clGenerateRuleConditionsReBuilt(String[] cond){
+		initialize();
+		
+		//cook the feed: 
+		//			  1. Capture syntax errors (?)
+		//			  2. Cook for rules extractions
+		try {
+			classObj = cookFeed();
+		} catch (Exception e) {
+			// TODO Auto-generated catch block
+			cookFeedFlg = false;
+			e.printStackTrace();
+		}
+		
+		
+	}
+	
+	public void extractConditions(String ruleName/*, clFeed feed*/){
+		
+		switch( ruleName){
+			case "clRuleHasClassName":
+//				String clName = feedObj.getClass().getName();
+				String clName = classObj.getName();
+				System.out.println(clName);
+				break;
+			
+			case "clRuleHasMethodName":
+				//cater scenario of multiple methods
+//				Class cls = feedObj.getClass();
+//				java.lang.reflect.Method[] mtds = cls.getMethods();
+				java.lang.reflect.Method[] methods = classObj.getMethods();
+				for(int i = 0; i < methods.length; i++){
+					String mthdName = methods[i].getName();
+					System.out.print(methods[i].getName());
+					System.out.println("        "+ classObj.getMethod(, parameterTypes)getClass());
+				}
+			
+		}
+		return;
+	}
+	
+	private static void initialize(){
+		String HALLO_WORLD_SOURCE = 
+				  "package generated;"
+				+ "public class Guitar"
+				+ "{\n"
+				+ "      int price;\n	"
+				+ "		 public static String run2() {\n"
+				+ "        return \"run sucessfully...\";\n" + "    }\n" + "}";
+		
+		classFeed = HALLO_WORLD_SOURCE;
+//		ruleName = preSelCond;		
+	/*	preSelCond = new String[20];
+		preSelCond[0] = "clRuleHasClassName";
+		preSelCond[1] = "clRuleHasMethodName";*/
+	}
+	
+	private static Class cookFeed() throws Exception{
+		SimpleCompiler compiler = new SimpleCompiler();
+		Class<?> cl = null;
+		try {
+			compiler.cook(new StringReader(classFeed));			
+		} catch (CompileException | IOException e) {
+			cookFeedFlg = false;
+			e.printStackTrace();
+		} 
+		
+		try {
+			 ClassLoader classLoader = compiler.getClassLoader();
+			 String clName = "generated."+"Guitar";
+			 cl = classLoader.loadClass(clName);
+		} catch (Exception e) {
+			e.printStackTrace();
+		}
+		
+		return cl;
+	}
+	/*private static void cookFeedOld() throws Exception{
+//		feedObj = new clFeed(classFeed);
+//		feedObj.cookFeed();
+		File sourceFile = new File("Feed.java");
+		FileWriter writer = new FileWriter(sourceFile);
+		writer.write(classFeed);
+		writer.close();
+		
+		JavaCompiler compiler = ToolProvider.getSystemJavaCompiler();
+		StandardJavaFileManager fileManager = compiler.getStandardFileManager(null, null, null);
+		fileManager.setLocation(StandardLocation.CLASS_OUTPUT, Arrays.asList(new File("generated/")));
+		 // Compile the file
+	      boolean success = compiler.getTask(null, fileManager, null, null, null,
+	          fileManager.getJavaFileObjectsFromFiles(Arrays.asList(sourceFile))).call();
+	      fileManager.close();
+	      
+	      
+	      Class params[] = {};
+	      Object paramsObj[] = {};
+	      try {
+		      Class thisClass = Class.forName("Feed");
+		      Object iClass = thisClass.newInstance();
+		      Method thisMethod = thisClass.getDeclaredMethod("run", params);
+		      thisMethod.invoke(iClass, paramsObj);
+	      } catch (Exception e) {
+	      	e.printStackTrace();
+	      }
+	}*/
+}

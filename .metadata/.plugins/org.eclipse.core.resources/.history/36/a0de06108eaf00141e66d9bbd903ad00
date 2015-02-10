@@ -1,0 +1,27 @@
+package rulePack;
+
+
+public class clClassCondition extends clConditions{
+
+	public clClassCondition(String objType) {
+		//new key can be introduced in ruleMap to sort the conditions; This is commented here
+		// super(objID); 
+		super(objType);
+	}
+	private String className; //Indicator to check if 
+	private boolean checkConstructor;
+	
+	
+	public boolean isCheckConstructor() {
+		return checkConstructor;
+	}
+	public void setCheckConstructor(boolean checkConstructor) {
+		this.checkConstructor = checkConstructor;
+	}
+	public String getClassName() {
+		return className;
+	}
+	public void setClassName(String className) {
+		this.className = className;
+	}
+}

@@ -5,7 +5,7 @@ import rulePack.clRuleConditions;
 
 /************************************************************************
  * Main Controller Class - Singleton
- * TO-DO: Check the scenario in multi-threaded environment
+ * TO-DO: Check the scenario in Multi-threaded environment
  ***********************************************************************/
 
 public final class clController {
@@ -25,22 +25,17 @@ public static clController instance = null;
 
 	public clResultObjectSet evaluateFeed(int excNo, clFeed feed) {
 		
-		clObjectValidator codeValidator = new clObjectValidator();
-		clResultObjectSet resultObjectSet = null;
+		clObjectValidator objValidator = new clObjectValidator();
+		clResultObjectSet resultSet = null;
 		
 		//Get corresponding ruleSet from DB
 		String ruleSetName = clModel.getInstance().fetchRuleSetName(excNo);
 		
 		clRuleConditions ruleSetCond = clModel.getInstance().fetchRuleSetConditions(excNo);
 		
+		resultSet = objValidator.evaluate(ruleSetName, ruleSetCond, feed);
 		
-		resultObjectSet = codeValidator.evaluate(ruleSetName, ruleSetCond, feed);
-		
-		
-//		resultObject = 
-		return resultObjectSet;
-		
-		
+		return resultSet;
 	}
 
 }

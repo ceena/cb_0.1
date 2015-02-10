@@ -1,0 +1,23 @@
+package model;
+
+import java.io.FileOutputStream;
+import java.io.ObjectOutputStream;
+
+
+public class objSerializer {
+
+	FileOutputStream fOutStream;
+	ObjectOutputStream outStream;
+	
+	public objSerializer(String path){
+		
+		try {
+			fOutStream = new FileOutputStream(path);
+			outStream = new ObjectOutputStream(fOutStream);
+		} catch (Exception e) {
+			// TODO Auto-generated catch block
+			e.printStackTrace();
+		}
+		
+	}
+}

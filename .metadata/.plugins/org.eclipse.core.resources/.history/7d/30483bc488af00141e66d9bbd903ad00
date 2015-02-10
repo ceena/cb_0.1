@@ -1,0 +1,33 @@
+package rulePack;
+
+public class clMethodCondition extends clConditions{
+
+	private String methodName;
+	private String returnType;
+	
+	public clMethodCondition(String objType) {
+		super(objType);
+		// TODO Auto-generated constructor stub
+	}
+
+
+	public String getMethodName() {
+		return methodName;
+	}
+
+
+	public void setMethodName(String methodName) {
+		this.methodName = methodName;
+	}
+
+
+	public String getReturnType() {
+		return returnType;
+	}
+
+
+	public void setReturnType(String returnType) {
+		this.returnType = returnType;
+	}
+
+}

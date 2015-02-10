@@ -1,8 +1,0 @@
-package rulePack;
-
-public class clConditions implements IFConditions {
-
-	public clConditions(String objID){
-		IFConditions.objectID = objID;
-	}
-}

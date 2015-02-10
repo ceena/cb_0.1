@@ -1,7 +1,7 @@
 package rulePack;
 
 import controller.clFeed;
-import controller.clResultObject;
+import controller.clResultObjectSet;
 
 public abstract class IFRule {
 	int ID      = 0;
@@ -13,5 +13,5 @@ public abstract class IFRule {
 		this.ID = id;
 		this.desc = desc;
 	}
-	public abstract clResultObject checkRule(clRuleConditions ruleSetCond, clFeed feed);
+	public abstract clResultObjectSet checkRule(clRuleConditions ruleSetCond, clFeed feed);
 }

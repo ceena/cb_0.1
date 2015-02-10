@@ -1,8 +1,21 @@
 <?xml version="1.0" encoding="UTF-8" standalone="no"?>
 <qualifiedTypeNameHistroy>
 <fullyQualifiedTypeName name="java.lang.reflect.Constructor"/>
-<fullyQualifiedTypeName name="java.util.ArrayList"/>
 <fullyQualifiedTypeName name="rulePack.IFRule"/>
 <fullyQualifiedTypeName name="rulePack.clClassCondition"/>
 <fullyQualifiedTypeName name="rulePack.IFConditions"/>
+<fullyQualifiedTypeName name="java.util.Hashtable"/>
+<fullyQualifiedTypeName name="java.util.TreeMap"/>
+<fullyQualifiedTypeName name="java.util.HashMap"/>
+<fullyQualifiedTypeName name="java.util.Map.Entry"/>
+<fullyQualifiedTypeName name="java.util.Map"/>
+<fullyQualifiedTypeName name="rulePack.clRuleAtt"/>
+<fullyQualifiedTypeName name="controller.clResultObject"/>
+<fullyQualifiedTypeName name="controller.clResultObjectSet"/>
+<fullyQualifiedTypeName name="javax.tools.ToolProvider"/>
+<fullyQualifiedTypeName name="controller.clFeed"/>
+<fullyQualifiedTypeName name="java.util.ArrayList"/>
+<fullyQualifiedTypeName name="java.util.Iterator"/>
+<fullyQualifiedTypeName name="java.util.Arrays"/>
+<fullyQualifiedTypeName name="rulePack.clMethodCondition"/>
 </qualifiedTypeNameHistroy>

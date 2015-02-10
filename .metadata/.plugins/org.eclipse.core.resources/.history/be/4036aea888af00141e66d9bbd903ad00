@@ -1,0 +1,10 @@
+package rulePack;
+
+public class clMethodCondition extends clConditions{
+
+	public clMethodCondition(String objType) {
+		super(objType);
+		// TODO Auto-generated constructor stub
+	}
+
+}

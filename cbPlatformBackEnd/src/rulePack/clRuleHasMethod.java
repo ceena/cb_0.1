@@ -2,6 +2,7 @@ package rulePack;
 
 import controller.clFeed;
 import controller.clResultObject;
+import controller.clResultObjectSet;
 
 public class clRuleHasMethod  extends IFRule{
 	
@@ -12,11 +13,10 @@ public class clRuleHasMethod  extends IFRule{
 		this.setAttributes(id, desc);
 	}
 	@Override
-	public clResultObject checkRule(clRuleConditions ruleSetCond, clFeed feed) {
-		// TODO Auto-generated method stub
-		
-		
-		return new clResultObject(0, 0, " implement clRuleHasMainMethod checkRule");
+	public clResultObjectSet checkRule(clRuleConditions ruleSetCond, clFeed feed) {
+		clResultObjectSet resultSet = new clResultObjectSet();
+		resultSet.addResultObject(new clResultObject(0, 0, " implement clRuleHasMainMethod checkRule"));
+		return resultSet;
 	}
 
 }

@@ -1,0 +1,62 @@
+package rulePack;
+
+import java.util.Iterator;
+
+import controller.clFeed;
+
+public class clGenerateRuleConditions {
+	
+	static String classFeed;
+	static String ruleName;
+	static clFeed feedObj = null;
+//	static String[] preSelConds;
+	
+	
+	public static void main(String[] args) {
+		clGenerateRuleConditions ruleCond = new clGenerateRuleConditions();
+		ruleCond.extractConditions(ruleName, feedObj);
+	}
+	
+	public void clGenerateRuleConditions(){
+		initialize(args);
+		
+		//cook the feed: 
+		//			  1. Capture syntax errors (?)
+		//			  2. Cook for rules extractions
+		cookFeed();
+		
+		if (feedObj.isCooked() == true){
+			this.extractConditions(ruleName, classFeed);
+		}
+	}
+	
+	public Iterator<String> extractConditions(String ruleName, String feed){
+		
+		switch( ruleName){
+			case "clRuleHasClassName":
+				feedObj
+				break;
+			
+		}
+		return null;
+	}
+	
+	private static void initialize(String preSelCond[]){
+		String HALLO_WORLD_SOURCE = "public class Guitar"
+				+ "{\n"
+				+ "      int price;\n	"
+				+ "		 public static String run() {\n"
+				+ "        return \"run sucessfully...\";\n" + "    }\n" + "}";
+		
+		classFeed = HALLO_WORLD_SOURCE;
+		ruleName = "clRuleHasClassName";		
+	/*	preSelCond = new String[20];
+		preSelCond[0] = "clRuleHasClassName";
+		preSelCond[1] = "clRuleHasMethodName";*/
+	}
+	
+	private static void cookFeed(){
+		feedObj = new clFeed(classFeed);
+		feedObj.cookFeed();
+	}
+}

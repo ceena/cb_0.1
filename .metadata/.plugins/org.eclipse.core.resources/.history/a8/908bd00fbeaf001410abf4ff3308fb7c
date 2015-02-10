@@ -1,0 +1,23 @@
+package model;
+
+import java.io.FileNotFoundException;
+import java.io.FileOutputStream;
+import java.io.ObjectOutputStream;
+
+
+public class objSerializer {
+
+	FileOutputStream fOutStream;
+	ObjectOutputStream outStream;
+	
+	public objSerializer(String path){
+		
+		try {
+			fOutStream = new FileOutputStream(path);
+		} catch (FileNotFoundException e) {
+			// TODO Auto-generated catch block
+			e.printStackTrace();
+		}
+		
+	}
+}

@@ -1,0 +1,8 @@
+1423396194238	Encapsulate field 'methodName'
+1423396225922	Encapsulate field 'returnType'
+1423396276762	Encapsulate field 'parametersType'
+1423398591005	Rename local variable 'condition'
+1423398728486	Rename local variable 'mthdName'
+1423419871030	Rename type 'objSerializer'
+1423422387136	Move file
+1423449294090	Move file

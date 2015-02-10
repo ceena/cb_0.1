@@ -1,0 +1,14 @@
+package model;
+
+import java.io.FileOutputStream;
+import java.io.ObjectOutputStream;
+
+
+public class objSerializer {
+
+	FileOutputStream fOutStream;
+	ObjectOutputStream outStream;
+	public objSerializer(){
+		
+	}
+}

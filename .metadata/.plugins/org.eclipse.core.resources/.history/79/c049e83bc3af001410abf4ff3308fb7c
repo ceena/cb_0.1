@@ -1,0 +1,23 @@
+package model;
+
+import java.io.FileNotFoundException;
+import java.io.FileOutputStream;
+import java.io.ObjectOutputStream;
+
+
+public class clObjSerializer {
+
+	FileOutputStream fOutStream;
+	ObjectOutputStream outStream;
+	
+	public clObjSerializer(){
+		
+	}
+	
+	public void writeToFile(String path, Object obj) throws Exception{
+			fOutStream = new FileOutputStream(path);
+			outStream = new ObjectOutputStream(fOutStream);
+			outStream.writeObject(obj);
+			outStream.close();
+	}
+}

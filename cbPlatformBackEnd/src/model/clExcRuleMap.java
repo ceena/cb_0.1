@@ -25,7 +25,7 @@ public class clExcRuleMap {
 			 ruleSetName = "rulePack.clRuleSet1000";
 			 break;
 		case 1001:
-			 ruleSetName = "rulePack.clRuleSet1001";
+			 ruleSetName = "rulePack.clRuleSet1000";
 			 break;
 		case 1002:
 			 ruleSetName = "rulePack.clRuleSet1002";
@@ -50,7 +50,7 @@ public class clExcRuleMap {
 //			ruleCondition.addCondition("clRuleHasMethod", "att_method_ret_type","void");
 //			ruleCondition.addCondition(instance);
 			
-			clClassCondition clsCond = new clClassCondition("clsCond01");
+			clClassCondition clsCond = new clClassCondition("clRuleHasClassName");
 			clsCond.setClassName("Guitar");
 			clsCond.setCheckConstructor(true);
 			ruleCondition.addCondition("clRuleHasClassName", clsCond);
@@ -58,6 +58,16 @@ public class clExcRuleMap {
 			
 			break;
 		
+		case 1001:
+			String path =  "D:\\Users\\srinivaa\\Documents\\GitHub\\cb_0.1\\cbPlatformBackEnd\\war\\WEB-INF\\classes\\model\\1001.cbp";
+			clObjSerializer objSerializer = new clObjSerializer();
+			try {
+				ruleCondition = (clRuleConditions) objSerializer.readFromFile(path);
+			} catch (Exception e1) {
+				// TODO Auto-generated catch block
+				e1.printStackTrace();
+			}
+			
 		default:
 			//Do nothing
 			break;

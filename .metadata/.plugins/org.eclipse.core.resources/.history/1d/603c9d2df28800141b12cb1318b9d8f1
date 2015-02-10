@@ -1,9 +1,0 @@
-package rulePack;
-
-public abstract class clConditions {
-
-	private String objectID = null;
-	public clConditions(String objID){
-		objectID = objID;
-	}
-}

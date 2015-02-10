@@ -4,7 +4,6 @@ import controller.clController;
 import controller.clFeed;
 import controller.clFeeder;
 import controller.clResultObjectSet;
-
 public class clUIMain {
 
 	static clController controller = null;
@@ -25,21 +24,24 @@ public class clUIMain {
 
 	
 	public static void initialize() {
-//		String str = new String( 
-//					"public class HelloWorld{"
-//				  + "public static void main(String[] args){"
-//				  + "System.out.println(\"Hello World!\")"
-//				  + "}}" );
+		String HALLO_WORLD_SOURCE = new String( 
+									 "public class Guitar\n"
+									+ "{\n"
+									+ "      static int price;\n	"
+									+ "		 public static String run() {\n"
+									+ "        return \"run sucessfully...\";\n" + "    }\n" + "}"	
+									);
 		
-		String HALLO_WORLD_SOURCE = "public class Guitar"
-				+ "{\n"
-				+ "      int price; public static String run() {\n"
-				+ "        return \"run sucessfully...\";\n" + "    }\n" + "}";
+		/*String HALLO_WORLD_SOURCE = "public class Guitar"
+									+ "{"
+									+ "      public String run() {"
+									+ "         return \"run sucessfully...\";"  
+									+ "      }" 
+									+ "}";*/
 		
 		
 		controller = clController.getInstance();
 		feedFromUI = new clFeed(HALLO_WORLD_SOURCE);
-		excNo = 1000;
-		//new line - testing git
+		excNo = 1001;
 	}
 }
